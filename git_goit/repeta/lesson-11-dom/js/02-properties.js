@@ -16,6 +16,11 @@ magicBtn.addEventListener('click', () => {
   imageEl.alt = 'This is a new cat';
 });
 
+const heroTitleEl = document.querySelector('.hero__title');
+console.log(heroTitleEl);
+console.log(heroTitleEl.textContent);
+heroTitleEl.textContent = 'I am a cat';
+
 // const imageEl = document.querySelector('.hero__image');
 // // console.log('imageEl', imageEl);
 // imageEl.src =
@@ -44,3 +49,6 @@ magicBtn.addEventListener('click', () => {
 // const actions = document.querySelectorAll('.js-actions button');
 // console.log(actions);
 // console.log(actions[2].dataset.action);
+
+// const actions = document.querySelectorAll('.js-actions button');
+// console.log(actions[0].dataset);
