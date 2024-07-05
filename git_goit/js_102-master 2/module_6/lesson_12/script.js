@@ -221,44 +221,44 @@
 // Приклад ініціалізації екземпляру класа:
 // const student = new Student('Петрик', 'Пяточкин', 2020);
 
-// class User {
-//   #name;
-//   #surname;
-//   constructor(name, surname) {
-//     this.#name = name;
-//     this.#surname = surname;
-//   }
+class User {
+  #name;
+  #surname;
+  constructor(name, surname) {
+    this.#name = name;
+    this.#surname = surname;
+  }
 
-//   getFullName() {
-//     return `${this.#name} ${this.#surname}`;
-//   }
-// }
+  getFullName() {
+    return `${this.#name} ${this.#surname}`;
+  }
+}
 
-// class Student extends User {
-//   constructor(name, surname, year) {
-//     super(name, surname);
+class Student extends User {
+  constructor(name, surname, year) {
+    super(name, surname);
 
-//     this.year = year;
-//   }
+    this.year = year;
+  }
 
-//   getCourse(){
-//     const currentTime = new Date();
-//     const currentYear = currentTime.getFullYear();
+  getCourse() {
+    const currentTime = new Date();
+    const currentYear = currentTime.getFullYear();
 
-//     const diff = currentYear - this.year;
+    const diff = currentYear - this.year;
 
-//     if(diff > 5) {
-//         return 'Студент являється випускником'
-//     }
+    if (diff > 5) {
+      return "Студент являється випускником";
+    }
 
-//     return `${diff} курс`
-//   }
-// }
+    return `${diff} курс`;
+  }
+}
 
-// const student = new Student("Петрик", "Пяточкин", 2018);
-// console.log(student);
-// console.log(student.getFullName()); //поверне 'Петрик Пяточкин'
-// console.log(student.getCourse()); //поверне 4
+const student = new Student("Петрик", "Пяточкин", 2018);
+console.log(student);
+console.log(student.getFullName()); //поверне 'Петрик Пяточкин'
+console.log(student.getCourse()); //поверне 4
 
 // *******Task-3******* \\
 // Необхідно створити клас Hero, який представляє героя з гри. Клас повинен мати публічні властивості name, level та health, а також методи attack та heal, що дозволяють герою атакувати та відновлювати здоров'я відповідно.
@@ -314,46 +314,46 @@
 // console.log(student);
 // console.log(student.name);
 
-const user = {
-  name: "Alice",
-  age: 18,
-};
+// const user = {
+//   name: "Alice",
+//   age: 18,
+// };
 
-const student = Object.assign({}, user, { city: "Lviv" });
+// const student = Object.assign({}, user, { city: "Lviv" });
 
-console.log(student);
+// console.log(student);
 
 // "Статичні властивості - властивості, що доступні тільки класові, але не його екземплярам." Тоді не зовсім розумію яким чином в цьому прикладі з конспекту mango достукується до статичної властивості roles і його роль змінюється:
-class User {
-  static roles = {
-    admin: "admin",
-    editor: "editor",
-    basic: "basic",
-  };
+// class User {
+//   static roles = {
+//     admin: "admin",
+//     editor: "editor",
+//     basic: "basic",
+//   };
 
-  #email;
-  #role;
-  constructor({ email, role = User.roles.basic }) {
-    this.#email = email;
-    this.#role = role;
-  }
-  get role() {
-    return this.#role;
-  }
-  set role(newRole) {
-    this.#role = newRole;
-  }
-}
+//   #email;
+//   #role;
+//   constructor({ email, role = User.roles.basic }) {
+//     this.#email = email;
+//     this.#role = role;
+//   }
+//   get role() {
+//     return this.#role;
+//   }
+//   set role(newRole) {
+//     this.#role = newRole;
+//   }
+// }
 
-const mango = new User({
-  email: "mango@mail.com",
-  role: User.roles.admin,
-});
+// const mango = new User({
+//   email: "mango@mail.com",
+//   role: User.roles.admin,
+// });
 
-console.log(mango.role); // "admin"
-mango.role = User.roles.editor;
-console.log(mango.role); // "editor"
-// За бажанням самостійно виконати
+// console.log(mango.role); // "admin"
+// mango.role = User.roles.editor;
+// console.log(mango.role); // "editor"
+// // За бажанням самостійно виконати
 
 // *******Task-4******* \\
 // Необхідно створити клас BankAccount, який представляє банківський рахунок. Клас повинен мати приватну властивість balance, яка представляє баланс рахунку. Клас повинен також мати публічні методи deposit та withdraw, які дозволяють здійснювати операції з депозитом та зняттям коштів з рахунку. При цьому balance повинна бути доступна лише в межах класу BankAccount та його приватних методів.
@@ -369,7 +369,6 @@ console.log(mango.role); // "editor"
 // console.log(instance);
 
 // ДАЙ ЗАВДАННЯ ПО КЛАСАМ!!!!!
-
 
 // Створіть клас Product з такими властивостями:
 
@@ -398,9 +397,6 @@ console.log(mango.role); // "editor"
 // Додайте метод до класу Clothing:
 
 // getSize(): повертає розмір одягу продукту.
-
-
-
 
 // Приклад ініціалізації екземплярів класів
 
